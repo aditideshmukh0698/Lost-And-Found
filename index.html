@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HOME PAGE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="newjsp.jsp" onsubmit=" return validate()" method="post">
+            item:<select id="item" name="things">
+                     <option value="selectm" selected disabled hidden>Select</option>
+                     <option value="Comp">Computer </option>
+                     <option value="Mobile"> Mobile </option>
+                     <option value="new"> New item </option>
+                     </select>
+                    
+            <button name="butto" > NEXT </button>
+        </form>
+       
+        <script>
+            function validate(){
+                var a=document.getElementById("item").value;
+                if(a=="selectm")
+                {
+                    //document.getElementById("item").innerHTML="Select";
+                   alert("wrog");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
